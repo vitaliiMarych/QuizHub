@@ -6,3 +6,8 @@ export const registerValidation = [
     body('password', 'Password at least 5 characters').isLength({min: 5}),
     body('avatarUrl', 'Bad avatar url').optional().isURL(),
 ];
+
+export const loginValidation = [
+    body('email', 'Bad email format').isEmail(),
+    body('password', 'Password at least 5 characters').isLength({min: 5}),
+]

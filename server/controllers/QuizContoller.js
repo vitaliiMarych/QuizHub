@@ -22,13 +22,6 @@ export const getOne = async (req,res) => {
 
 export const create = async (req, res) => {
     try {
-
-        const errors = validationResult(req);
-
-        if (!errors.isEmpty()){
-            return res.status(400).json(errors.array());
-        }
-
         const questions = req.body.questions;
         let questionIdArray = [];
 
@@ -74,13 +67,7 @@ export const getAll = async (req,res) => {
 }
 
 export const remove = async (req,res) => {
-    try {
-        const errors = validationResult(req);
-
-        if (!errors.isEmpty()){
-            return res.status(400).json(errors.array());
-        }
-    
+    try {    
         const quizId = req.params.id;
     
         const quiz = await QuizModel.findById(quizId);
@@ -100,13 +87,7 @@ export const remove = async (req,res) => {
 }
 
 export const update = async (req, res) => {
-    try {
-        const errors = validationResult(req);
-
-        if (!errors.isEmpty()) {
-          return res.status(400).json(errors.array());
-        }
-    
+    try {    
         const quizId = req.params.id;
         const quizData = req.body;
     
