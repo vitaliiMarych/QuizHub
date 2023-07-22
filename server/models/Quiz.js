@@ -12,6 +12,16 @@ const QuizSchema = new mongoose.Schema(
                 type: mongoose.Types.ObjectId,
                 ref: 'Question',
             })
+        },
+
+        author: {
+            type: mongoose.Types.ObjectId,
+            ref: 'User',
+            required: true
+        },
+
+        imageUrl: {
+            type: String,
         }
 
     },

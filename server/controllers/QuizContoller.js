@@ -39,6 +39,8 @@ export const create = async (req, res) => {
         const doc = new QuizModel({
             title : req.body.title,
             questions : questionIdArray,
+            author: req.userId,
+            imageUrl: req.body.imageUrl
         })
 
         const Quiz = await doc.save();
@@ -116,6 +118,7 @@ export const update = async (req, res) => {
             {
                 title: quizData.title,
                 questions: questionIdArray,
+                imageUrl: quizData.imageUrl,
             });
 
         res.json({ success : true });

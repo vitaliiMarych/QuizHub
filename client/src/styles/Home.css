@@ -1,0 +1,68 @@
+
+.home {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to right, white 50%, rgb(83, 107, 244) 50%);
+    animation: background-animation 2.5s ease-in-out ;
+    background-size: 200% 100%;
+    background-position: 50% 0;
+}
+
+.home_content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.home_content_title {
+    font-size: 3.5rem;
+    display: flex;
+    text-align: center;
+}
+
+.home_content_title_1{
+    color: darkblue;
+    flex: 1;
+    text-align: right;
+    left: 0.1rem;
+    
+}
+
+.home_content_title_2{
+    color: aliceblue;
+    flex: 1;
+    text-align: left;
+    padding-left: 0.2rem;
+}
+
+.home_content_desc {
+    transform: translate(75%, 0);
+    max-width: 75%;
+    margin-top: 1rem;
+}
+
+.home_content_paragraph {
+    color: aliceblue;
+    text-align: left;
+    font-size: 1.3rem;
+}
+
+.home_content_button_wrapper {
+    display: flex;
+    justify-content: center;
+    transform: translate(-14%, 0);
+}
+
+
+
+@keyframes background-animation {
+
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 50% 0;
+    }
+}

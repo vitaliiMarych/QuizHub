@@ -6,4 +6,5 @@ export const quizValidation = [
     body('questions.*.question', 'Question short').isLength({min: 5}),
     body('questions.*.options', 'Min 2 options').isArray({min: 2}),
     body('questions.*.correctOptionIndex', 'Bad index').isInt().notEmpty(),
+    body('imageUrl', 'Bad image url').optional().isString(),
 ] 
