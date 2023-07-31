@@ -1,6 +1,6 @@
 import { Dispatch } from "react";
 import { QuizzesAction, QuizzesActionType } from "../../types/QuizzesTypes";
-import axios from '../../axios/myAxios'
+import axios from '../../axios/myAxios';
 
 export const fetchQuizzes = () => {
     return async (dispatch: Dispatch<QuizzesAction>) => {
