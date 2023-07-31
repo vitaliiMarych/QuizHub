@@ -6,12 +6,11 @@ const QuestionSchema = new mongoose.Schema(
         question: {
             type: String,
             require: true,
-
         },
 
         options: {
             type: Array(String),
-            default: []
+            default: [],
         },
 
         correctOptionIndex: {

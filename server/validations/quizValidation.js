@@ -7,4 +7,15 @@ export const quizValidation = [
     body('questions.*.options', 'Min 2 options').isArray({min: 2}),
     body('questions.*.correctOptionIndex', 'Bad index').isInt().notEmpty(),
     body('imageUrl', 'Bad image url').optional().isString(),
+
+    body().custom((value, { req }) => {
+
+        const allowedKeys = ['title', 'questions', 'imageUrl'];
+        const extraKeys = Object.keys(req.body).filter(key => !allowedKeys.includes(key));
+        
+        if (extraKeys.length > 0) {
+          throw new Error('Invalid request data');
+        }
+        return true;
+      }),
 ] 

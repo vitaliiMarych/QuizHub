@@ -8,7 +8,6 @@ import { checkAuth, handleValidationErrors } from './utils/index.js';
 
 import { UserController, QuizController } from './controllers/index.js';
 
-
 mongoose.connect(
     'mongodb+srv://vitmar170408:LoSZmuEHgLR4tDXw@quizhub.1rl8qlo.mongodb.net/Quizhub?retryWrites=true&w=majority'
     ).then(()=> console.log("DB OK"))
