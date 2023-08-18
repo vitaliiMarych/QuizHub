@@ -3,7 +3,7 @@
     height: 100vh;
     width: 100%;
     background: linear-gradient(to right, white 50%, rgb(83, 107, 244) 50%);
-    animation: background-animation 2.5s ease-in-out ;
+    animation: background-animation 2.0s ease-in-out ;
     background-size: 200% 100%;
     background-position: 50% 0;
 }
@@ -52,6 +52,7 @@
     display: flex;
     justify-content: center;
     transform: translate(-14%, 0);
+    text-decoration: none;
 }
 
 

@@ -1,12 +1,9 @@
 import React from 'react';
-import '../styles/Home.css';
+import QuizzesContent from '../components/QuizzesPage/QuizContentComponent';
 
 const Quizzes = () => {
   return (
-    <div>
-        <h1>fesfesfsefsef</h1>
-    </div>
-
+    <QuizzesContent/>
   );
 }
 

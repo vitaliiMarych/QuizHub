@@ -16,6 +16,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
+app.use('/uploads', express.static('uploads'));
 
 // Multer
 const storage = multer.diskStorage({

@@ -34,6 +34,7 @@ export const create = async (req, res) => {
             title : req.body.title,
             questions : response.questionIdArray,
             author: req.userId,
+            description: req.body.description,
             imageUrl: req.body.imageUrl
         });
 
@@ -100,7 +101,6 @@ export const update = async (req, res) => {
     
     try {    
         const quizId = req.params.id;
-        const quizData = req.body;
     
         const quiz = await QuizModel.findById(quizId);
 
@@ -117,9 +117,10 @@ export const update = async (req, res) => {
 
         await QuizModel.findByIdAndUpdate(quizId, 
             {
-                title: quizData.title,
+                title: req.body.title,
                 questions: response.questionIdArray,
-                imageUrl: quizData.imageUrl,
+                description: req.body.description,
+                imageUrl: req.body.imageUrl,
             });
 
         await session.commitTransaction();

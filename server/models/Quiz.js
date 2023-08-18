@@ -7,6 +7,11 @@ const QuizSchema = new mongoose.Schema(
             require: true,
         },
 
+        description: {
+            type: String,
+            require: true,
+        },
+
         questions: {
             type: Array({
                 type: mongoose.Types.ObjectId,

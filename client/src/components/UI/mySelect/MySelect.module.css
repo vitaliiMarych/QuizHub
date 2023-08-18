@@ -1,0 +1,32 @@
+
+.mySelect {
+  width: 150px;
+  height: 45px;
+  background-color: white;
+
+  text-align: center;
+  font-size: 17px;
+
+  margin: 10px 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.mySelect::after {
+  content: '\25BC';
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 17px;
+  color: black;
+}
+
+.myOption {
+  font-size: 17px;
+  color: black;
+}
+
+.myOption:disabled{
+  color: gray;
+}
